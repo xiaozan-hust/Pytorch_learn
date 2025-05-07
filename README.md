@@ -6,4 +6,7 @@
 
 ## 文件树
 
-* xxx
+* data: 存放测试用数据集
+* note: 记录代码之外的一些笔记
+* runs: 存放训练结果与TensorBoard可视化用
+* scripts: 存放代码
