@@ -1,4 +1,4 @@
-## Pytorch学习笔记
+## Pytorch学习笔记1
 
 ### 1.1 PyTorch环境配置
 
@@ -35,14 +35,35 @@
 * 依次输入：`python`  `import torch`   `torch.cuda.is_available()`
 * 返回True即表示安装成功
 
-### PyCharm与Jupter
+### 1.2 PyCharm与Jupyter
 
 关于以上两个软件的安装可以自行去网上搜索教程。
 
-#### PyCharm的一些用法
+#### 1.2.1 PyCharm的一些用法
 
 * 在PyCharm中鼠标点到某个函数，然后按住“Alt+P”可以显示该函数的传参类型
 * 如果PyCharm中出现检索不当的情况，可以选择file->使缓存失效，然后重启PyCharm
 * PyCharm中有一个非常有用的控制台功能，类似于MATLAB ![python控制台](imgs/01.png)
 
-hahs
+#### 1.2.2 Jupyter的一些用法
+
+若已安装Anaconda，则默认安装了Jupyter，不过它默认安装在了base环境，若要在虚拟环境中安装，可以执行：`conda install nb_conda`
+
+* 终端执行 `jupyter notebook`启动
+* Jupyer中代码以块的形式存在，类似于MATLAB
+
+### 1.3 dir()与help()函数
+
+* dir()函数：返回python工具包中的内容
+* help()函数：返回某工具包中某函数的具体使用方法
+
+在python或者pytorch中，几乎每一个函数都写了非常详细的使用方法，并且还会有demo，当我们并不知道该如何去使用一个功能时，我们可以通过dir()和help()函数去查看具体的使用方法(其实也可以直接在IDE中Ctrl+鼠标单击查看)
+
+例如我们想看一下该如何使用TensorBoard中的SummaryWriter具体有什么功能，又该如何使用：
+
+![SummaryWriter](imgs/02.png)
+
+并且，我们还想看看add_sca的具体用法：
+![add_scalar](imgs/03.png)
+
+在详细的介绍中，甚至还有例子供我们测试。
