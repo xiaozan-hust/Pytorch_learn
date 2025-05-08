@@ -36,6 +36,11 @@ class MyData(Dataset):
                                                                    # 所以通过索引可视化的图像顺序与在文件夹中看到的顺序并不一致
 
     def __getitem__(self, idx):
+        """
+        魔术方法，该方法定义后当类对象执行：类对象[下标索引]时实质上就是在调用该函数
+        :param idx: 下标索引
+        :return: 图像和图像对应的标签
+        """
         img_name = self.image_listdir[idx]
         img_name_path = os.path.join(self.image_path, img_name)
         img = Image.open(img_name_path)
