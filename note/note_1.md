@@ -68,4 +68,11 @@
 
 在详细的介绍中，甚至还有例子供我们测试。
 
-### 1.4
+### 1.4 卷积层实现
+
+此处只放非代码类笔记，详细的实现过程与对应注释请查看test_5.py文件
+
+卷积层实现中比较重要的公式，可以用于计算padding或dilation以及卷积的输出结果等：
+![conv2d](imgs/04.png)
+
+更为详细的内容请参考官方网页：[torch.nn.Conv2d](https://docs.pytorch.org/docs/stable/generated/torch.nn.Conv2d.html#torch.nn.Conv2d)
