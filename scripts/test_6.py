@@ -3,7 +3,7 @@
 """
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# nn.Module Conv2d MaxPool2d ReLU Sigmoid Linear # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # ##
+# nn.Module # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  # # # # # ##
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 # ###########################################################################################################
@@ -49,6 +49,8 @@ from torch import nn
 from torch.ao.nn.quantized import Sigmoid
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
+from triton.language import dtype
+
 
 class TestNet(nn.Module):
 
