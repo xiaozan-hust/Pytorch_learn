@@ -36,3 +36,4 @@ for i in range(5):
     writer.add_image("image", img_np, global_step=i, dataformats="HWC")
 
 writer.close()
+
