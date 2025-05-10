@@ -61,3 +61,5 @@ if __name__ == "__main__":
     test_img, test_label = dataset[0]
     print(f"文件夹路径：{dataset.image_path}，当前显示的图片：{dataset.image_listdir[0]}")
     test_img.show()
+
+
