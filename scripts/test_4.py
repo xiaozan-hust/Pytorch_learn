@@ -42,7 +42,7 @@ for data in dataloader:
     images, targets = data
     print(f"图像类型：{images.shape}, 对应标注标签：{targets}")
 
-# 在TensorBoard中查看
+# 在TensorBoard中查看                                                                                            # 如果数据很大，对应生成的事件文件也会很大，不适合传入github
 writer = SummaryWriter("../runs/test_4")
 step = 0
 for data in dataloader:
