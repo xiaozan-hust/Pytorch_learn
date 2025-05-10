@@ -4,6 +4,7 @@
 from time import sleep
 
 import torch.nn
+import torchvision
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # 神经网络搭建实践 Sequential的使用 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # ##
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -78,3 +79,10 @@ if __name__ == "__main__":
     writer.add_graph(my_net, input_test)        # 该方式可以将模型在TensorBoard中可视化查看
     writer.close()
 
+    # 使用图像去测试这个网络
+    dataset = torchvision.datasets.CIFAR10("../data", train=False, transform=torchvision.transforms.ToTensor(), download=True)
+    dataloader = DataLoader(dataset, batch_size=1, drop_last=True)
+    for data in dataloader:
+        images, targets = data
+        output_my_net = my_net(images)
+        print(output_my_net)
