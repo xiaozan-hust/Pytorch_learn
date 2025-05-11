@@ -64,6 +64,7 @@
 ![SummaryWriter](imgs/02.png)
 
 并且，我们还想看看add_sca的具体用法：
+
 ![add_scalar](imgs/03.png)
 
 在详细的介绍中，甚至还有例子供我们测试。
@@ -73,6 +74,13 @@
 此处只放非代码类笔记，详细的实现过程与对应注释请查看test_5.py文件
 
 卷积层实现中比较重要的公式，可以用于计算padding或dilation以及卷积的输出结果等：
+
 ![conv2d](imgs/04.png)
 
 更为详细的内容请参考官方网页：[torch.nn.Conv2d](https://docs.pytorch.org/docs/stable/generated/torch.nn.Conv2d.html#torch.nn.Conv2d)
+
+### 1.5 用于CIFAR-10数据集的卷积神经网络
+
+网络结构如下：
+
+![CRFAR-10](imgs/05.png)
